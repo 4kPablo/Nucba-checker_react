@@ -1,0 +1,150 @@
+.Supercontainer {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 90vw;
+  background-color: #eee;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 1px 32px 2px rgba(0, 0, 0, 0.18);
+  -webkit-box-shadow: 0px 1px 32px 2px rgba(0, 0, 0, 0.18);
+  -moz-box-shadow: 0px 1px 32px 2px rgba(0, 0, 0, 0.18);
+}
+
+.Seccion_A {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px;
+
+  .ingresar-link {
+    background-color: var(--color-ingresar);
+    text-decoration: none;
+    color: #fff;
+    width: 220px;
+    padding: 10px;
+    margin: 10px;
+  }
+
+  .idpass-container {
+    width: 160px;
+    margin: 10px;
+    color: #444;
+  }
+
+  .id {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .pass {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.Seccion_B {
+  display: flex;
+  gap: 10px;
+}
+
+////////////////////////////
+// NEW BUTTONS
+////////////////////////////
+/* From uiverse.io by @nikk7007 */
+button {
+  padding: 0.8em 1.8em;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 16px;
+  transition: .3s;
+  z-index: 1;
+  font-family: inherit;
+  color: #17C3B2;
+  cursor: pointer;
+}
+
+button::before {
+  content: '';
+  width: 0;
+  height: 500%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  background: var(--color-desafio);
+  transition: .5s ease;
+  display: block;
+  z-index: -1;
+}
+
+button:hover::before {
+  width: 105%;
+}
+
+button:hover {
+  color: #111;
+}
+
+////////////////////////////
+// ANIMATED BG
+////////////////////////////
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+.bg {
+  animation: slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, #533483 50%, #E94560 50%);
+  bottom: 0;
+  left: -50%;
+  opacity: .5;
+  position: fixed;
+  right: -50%;
+  top: 0;
+  z-index: -1;
+}
+
+.bg2 {
+  animation-direction: alternate-reverse;
+  animation-duration: 4s;
+}
+
+.bg3 {
+  animation-duration: 5s;
+}
+
+.content {
+  background-color: rgba(255, 255, 255, .8);
+  border-radius: .25em;
+  box-shadow: 0 0 .25em rgba(0, 0, 0, .25);
+  box-sizing: border-box;
+  left: 50%;
+  padding: 10vmin;
+  position: fixed;
+  text-align: center;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+h1 {
+  font-family: monospace;
+}
+
+@keyframes slide {
+  0% {
+      transform: translateX(-25%);
+  }
+
+  100% {
+      transform: translateX(25%);
+  }
+}
